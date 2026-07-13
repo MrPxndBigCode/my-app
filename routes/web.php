@@ -1,24 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view("index");
 });
 
-Route::get('abouts', function () {
-    $name = "Tanakorn";
-    $date = "6 ก.ค. 2569";
-    return view("abouts" ,compact('name','date'));
-})->name("abouts");
+Route::get('abouts',[AdminController::class , 'abouts'])->name("abouts");
 
-Route::get('blogs', function () {
-    $blogs=[
-    ['title' => 'บทความที่1','content'=> 'เนื้อหาบทความที่1','status' => true],
-    ['title' => 'บทความที่2','content'=> 'เนื้อหาบทความที่2','status' => true],
-    ['title' => 'บทความที่3','content'=> 'เนื้อหาบทความที่3','status' => true],
-];
+Route::get('blogs',[AdminController::class , 'blogs'])->name("blogs");
 
-    return view("blogs" , compact('blogs'));
-})->name("blogs");
+Route::get('form',[AdminController::class , 'form'])->name("form");
 
+Route::get('/books', [BookController::class, 'index']);
+Route::post('/books', [BookController::class, 'store']);

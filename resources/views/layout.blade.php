@@ -20,13 +20,16 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/about">หน้าแรก</a>
+                    <a class="nav-link active" aria-current="page" href="/">หน้าแรก</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/abouts">เกี่ยวกับเรา</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/blogs">บทความ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/form">เขียนบทความ</a>
                 </li>
             </ul>
 
