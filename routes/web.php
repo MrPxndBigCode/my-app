@@ -16,3 +16,6 @@ Route::get('form',[AdminController::class , 'form'])->name("form");
 
 Route::get('/books', [BookController::class, 'index']);
 Route::post('/books', [BookController::class, 'store']);
+
+Route::post('/create',[AdminController::Class, 'create'])->name('create');
+Route::post('/insert',[AdminController::Class, 'insert']);
